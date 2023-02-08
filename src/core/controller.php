@@ -1,0 +1,11 @@
+<?php 
+class controller{
+    public function model($model)
+ {
+      require_once'./src/models/'.$model.'.php';
+      return new $model;
+ }
+ public function view($view,$data =[] ){
+    require_once './src/view/'.$view.'.php';
+ }
+}
